@@ -1,0 +1,1 @@
+"./COMPLETO_PROXIMIDAD SEGMENTO.obj" "./src/msp430_uart.obj" "../lnk_msp430g2553.cmd" -llibc.a 
