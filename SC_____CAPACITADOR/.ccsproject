@@ -10,6 +10,6 @@
 	<rts value="libc.a"/>
 	<createSlaveProjects value=""/>
 	<templateProperties value="id=com.ti.common.project.core.emptyProjectWithMainTemplate_msp430,"/>
-	<isTargetManual value="false"/>
+	<isTargetManual value="true"/>
 	<origin value="C:/Users/javi_/workspace_v8/CapacitiveTouch1-master"/>
 </projectOptions>

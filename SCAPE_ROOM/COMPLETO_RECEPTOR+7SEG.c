@@ -1,10 +1,10 @@
 
 
 //------------------- CONEXIONADO ---------------------//
-//       P1.6-> LA LÍNEA DE DATOS DEL RECEPTOR IR      //
+//       P1.6-> LA LÃNEA DE DATOS DEL RECEPTOR IR      //
 //                   P2.3-> SWITCH                     //
 //       P2.0-> LATCH (P12 DEL 74HC595 / NARANJA)      //
-//          P1.(1-4)-> SELECCIÓN BIT DISPLAY           //
+//          P1.(1-4)-> SELECCIÃ“N BIT DISPLAY           //
 //                P1.5-> CLOCK (VERDE)                 //
 //               P1.7-> DATA (AMARILLO)                //
 //                 SALIDA -> PIN 2.4                   //
@@ -103,20 +103,20 @@ void main(void) {
 
     /*-------------------- PINES DEL 7segmentos:-----------------------*/
     P1SEL2 |= BIT5 | BIT7;  //P1.7: MOSI, P1.5: CLK
-    P1SEL |= BIT5 | BIT7;   // 11 PERIFÉRICO SECUNDARIO
+    P1SEL |= BIT5 | BIT7;   // 11 PERIFï¿½RICO SECUNDARIO
     P1DIR |= BIT5 | BIT7;   // P1.5 SALIDA P1.7
     P2DIR |= BIT0;   //P2.0: CS manejado manualmente
-    // SALIDAS INVOLUCRADAS EN LA ELECCIÓN DEL BIT //
+    // SALIDAS INVOLUCRADAS EN LA ELECCIï¿½N DEL BIT //
     P1SEL &= ~(BIT1|BIT2|BIT3|BIT4);
     P1SEL2 &= ~(BIT1|BIT2|BIT3|BIT4);
     P1DIR |= (BIT1|BIT2|BIT3|BIT4);
     P1OUT |= (BIT1|BIT2|BIT3|BIT4); //SON ACTIVOS A NIVEL BAJO, LOS INICIALIZAMOS A UNO PARA QUE NO SE VEA NADA
 
-    /*------ Configuración de la USCI-A para modo SPI:----------*/
+    /*------ Configuraciï¿½n de la USCI-A para modo SPI:----------*/
     UCB0CTL1 |= UCSWRST; // Resetea la USCI
     /* Registro de control 0:
-     * UCCKPH – Fase 1, Polaridad 0 (flanco subida)
-     * UCMSB – Empieza MSB
+     * UCCKPH ï¿½ Fase 1, Polaridad 0 (flanco subida)
+     * UCMSB ï¿½ Empieza MSB
      * UCMST -- Master mode
      * UCMODE_0 - 3-Pin SPI
      * UCSYNC -- Synchronous Mode     */
@@ -306,7 +306,7 @@ __interrupt void timercorrect (void) {
 
 
 #pragma vector=PORT2_VECTOR
-__interrupt void RUTINA_INTERRUPCIÓN_SWITCH_ON(void)
+__interrupt void RUTINA_INTERRUPCIï¿½N_SWITCH_ON(void)
 {
     if(P2IN & SWITCH)
     {
